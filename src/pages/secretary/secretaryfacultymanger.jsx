@@ -127,7 +127,7 @@ const Secretaryfacultymanager = () => {
         const result = await getMeResponse.json();
         const editorrole = result.user.role;
 
-        if (editorrole === 2 || userrole === 1) {
+        if (editorrole === 2 && userrole === 1) {
           toast.error('You cannot delete this user!');
         } else if (editedUser.email === result.user.email) {
           toast.error('You cannot delete your own account!');
@@ -306,7 +306,7 @@ const Secretaryfacultymanager = () => {
                   </li>
                   </div>
                 </ul>
-        
+
               </div>
             ))
           )}
@@ -322,8 +322,8 @@ const Secretaryfacultymanager = () => {
         </div>
       )}
 
-            
-                {isDeleteConfirmationOpen && (
+      
+{isDeleteConfirmationOpen && (
         <div className="confirmation-modal">
           <div className="modal-content">
             <p>Are you sure you want to delete this user?</p>
@@ -333,7 +333,7 @@ const Secretaryfacultymanager = () => {
             </div>
           </div>
         </div>
-      )}
+      )}                                                                  
         </div>
         
         </div>
