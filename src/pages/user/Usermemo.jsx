@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+youimport React, { useState, useEffect } from 'react';
 import HeaderDashboard from '../../components/headerdashboard';
 import Footer from '../../components/footer';
 import { Link } from 'react-router-dom';
@@ -157,7 +157,7 @@ const UserMemoManager = () => {
                 {filteredReceivedMemos.slice().reverse().map((memo) => (
                   <li key={memo._id} className="receivedMemoItem">
                     <Link
-                      to={`/admin/recieve_memo/${memo._id}`}
+                      to={`/user/recieve_memo/${memo._id}`}
                       onClick={(e) => handleRead(e, memo._id)}
                     >
                       <div className="memo-details-received">
