@@ -79,7 +79,7 @@
       console.log(value);
       
       if (value === 'BSIT') {
-        axios.get('https://collabsiaserver.onrender.com/api/getallbsit')
+        axios.get('/api/getallbsit')
         .then((response)=>{
           usersetProfile(response.data.bsituser);
           setLoading(false);
@@ -91,7 +91,7 @@
           toast.error('Error fetching users');
         });
       } else if (value === 'BSAT') {
-        axios.get('https://collabsiaserver.onrender.com/api/getallbsat')
+        axios.get('/api/getallbsat')
           .then((response) => {
             usersetProfile(response.data.bsatuser);
             setLoading(false);
@@ -103,7 +103,7 @@
             toast.error('Error fetching users');
           });
       } else if (value === 'BSFT') {
-        axios.get('https://collabsiaserver.onrender.com/api/getallbsft')
+        axios.get('/api/getallbsft')
         .then((response)=>{
           usersetProfile(response.data.bsftuser);
           setLoading(false);
@@ -116,7 +116,7 @@
         });
       }
         else if (value === 'BSET') {
-          axios.get('https://collabsiaserver.onrender.com/api/getallbset')
+          axios.get('/api/getallbset')
           .then((response)=>{
           usersetProfile(response.data.bsetuser);
           setLoading(false);
@@ -128,7 +128,7 @@
           toast.error('Error fetching users');
         });
       } else if (value === 'ALL') {
-        axios.get('https://collabsiaserver.onrender.com/api/getallusers')
+        axios.get('/api/getallusers')
         .then((response)=>{
           usersetProfile(response.data.users);
           setLoading(false);
@@ -139,7 +139,7 @@
           toast.error('Error fetching users');
         });
       } else if (value === 'ROLE') {
-        axios.get('https://collabsiaserver.onrender.com/api/role')
+        axios.get('/api/role')
         .then((response)=>{
           usersetProfile(response.data.baseonrole);
           setLoading(false);
@@ -156,7 +156,7 @@
 
 
     useEffect(() => {
-      axios.get('https://collabsiaserver.onrender.com/api/getallusers', {
+      axios.get('/api/getallusers', {
           headers: {
               Authorization: `Bearer ${token}`
           },token
@@ -178,7 +178,7 @@
 
     const handleConfirmDeleteuser = async (userrole) => {
       try {
-        const getMeResponse = await fetch('https://collabsiaserver.onrender.com/api/getme', {
+        const getMeResponse = await fetch('/api/getme', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -217,13 +217,13 @@
       try {
       
     
-        await axios.post('https://collabsiaserver.onrender.com/api/updateuserrole', {
+        await axios.post('/api/updateuserrole', {
           email: editedUser.email,
           role: updatedrole
         });
     
         // Refresh the user profiles after updating the department
-        const response = await axios.get('https://collabsiaserver.onrender.com/api/getallusers');
+        const response = await axios.get('/api/getallusers');
     
         // Find the updated user in the array
         const updatedUser = response.data.users.find(user => user.email === editedUser.email);
@@ -361,17 +361,7 @@
                     </div>
                   </ul>
            
-                  {isDeleteConfirmationOpen && (
-          <div className="confirmation-modal">
-            <div className="modal-content">
-              <p>Are you sure you want to delete this user?</p>
-              <div className="button-container">
-              <button onClick={handleConfirmDelete}>Yes</button>
-              <button onClick={handleConfirmationClosedelete}>No</button>
-            </div>
-            </div>
-          </div>
-        )}
+                 
                 </div>
               ))
               
@@ -388,6 +378,18 @@
               <button onClick={handleConfirmationClose}>No</button>
               </div>
               </div>  
+            </div>
+          </div>
+        )}
+
+{isDeleteConfirmationOpen && (
+          <div className="confirmation-modal">
+            <div className="modal-content">
+              <p>Are you sure you want to delete this user?</p>
+              <div className="button-container">
+              <button onClick={handleConfirmDelete}>Yes</button>
+              <button onClick={handleConfirmationClosedelete}>No</button>
+            </div>
             </div>
           </div>
         )}
