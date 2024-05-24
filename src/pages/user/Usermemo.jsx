@@ -38,7 +38,7 @@ const UserMemoManager = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const response = await axios.get('https://collabsia.vercel.app/api/details', {
+        const response = await axios.get('https://collabsiaserver.onrender.com/api/details', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
