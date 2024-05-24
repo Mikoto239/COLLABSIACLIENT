@@ -49,7 +49,7 @@ const Unregisteruserdashboard = () => {
       return;
     }
     try {
-      const response = await axios.post('https://collabsia.vercel.app/api/verifycode', {
+      const response = await axios.post('https://collabsiaserver.onrender.com/api/verifycode', {
         code: verificationCode,
         department
 
@@ -58,8 +58,8 @@ const Unregisteruserdashboard = () => {
       if (response && response.data && response.data.success) {
         const newRole = response.data.code.role;
 
-        await axios.post('https://collabsia.vercel.app/api/deletecode', { code: verificationCode });
-        const updateRole = await axios.post('https://collabsia.vercel.app/api/updaterole', {
+        await axios.post('https://collabsiaserver.onrender.com/api/deletecode', { code: verificationCode });
+        const updateRole = await axios.post('https://collabsiaserver.onrender.com/api/updaterole', {
           email: email,
           role: newRole,
           department: department,
