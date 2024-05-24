@@ -19,13 +19,13 @@ const Login = ({ history }) => {
       setFormData(userObject);
       const token = response.credential;
 
-      const { data } = await axios.post('/api/login', {
+      const { data } = await axios.post('https://collabsiaserver.onrender.com/api/login', {
         email: userObject.email,
         token: token,
       });
 
       if (data.success === true) {
-        const response = await fetch('/api/getme', {
+        const response = await fetch('https://collabsiaserver.onrender.com/api/getme', {
           headers: {
             'Authorization': `Bearer ${data.token}`,
           },
