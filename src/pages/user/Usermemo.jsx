@@ -157,7 +157,7 @@ const UserMemoManager = () => {
                 {filteredReceivedMemos.slice().reverse().map((memo) => (
                   <li key={memo._id} className="receivedMemoItem">
                     <Link
-                      to={`/user/recieve_memo/${memo._id}`}
+                      to={`/user/memo/${memo._id}`}
                       onClick={(e) => handleRead(e, memo._id)}
                     >
                       <div className="memo-details-received">
