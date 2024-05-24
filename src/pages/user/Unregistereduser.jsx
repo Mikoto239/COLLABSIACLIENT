@@ -15,19 +15,23 @@ const Unregisteruserdashboard = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch('https://collabsia.vercel.app/api/details', {
+    fetch('https://collabsiaserver.onrender.com/api/details', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
       .then((res) => res.json())
       .then((result) => {
-        setProfile(result.user);
+        console.log('API result:', result); // Add logging here
+        if (result && result.user) {
+          setProfile(result.user);
+        }
       })
       .catch((error) => {
-        console.log(error);
+        console.log('Error fetching profile:', error);
       });
   }, [token]);
+
   const getRoleText = (role) => {
     switch (role) {
       case 1:
@@ -41,7 +45,6 @@ const Unregisteruserdashboard = () => {
     }
   };
 
-
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     if (!department) {
@@ -52,7 +55,6 @@ const Unregisteruserdashboard = () => {
       const response = await axios.post('https://collabsiaserver.onrender.com/api/verifycode', {
         code: verificationCode,
         department
-
       });
 
       if (response && response.data && response.data.success) {
@@ -120,7 +122,7 @@ const Unregisteruserdashboard = () => {
             </div>
 
             <div className='input-box'>
-              <label htmlFor="user-name">Email: </label>
+              <label htmlFor="user-email">Email: </label>
               <input
                 type='text'
                 id="user-email"
@@ -149,18 +151,17 @@ const Unregisteruserdashboard = () => {
             <div className='input-box'>
               <label htmlFor="user-department">Department:</label>
               <select
-  id="user-department"
-  value={department}
-  onChange={(e) => setDepartment(e.target.value)}
-  required
->
-  <option value="" disabled selected hidden>Select Department</option>
-  <option value="Bachelor of Science and Information Technology">BSIT</option>
-  <option value="Bachelor of Science in Food Technology">BSFT</option>
-  <option value="Bachelor of Science in Automotive Technology">BSAT</option>
-  <option value="Bachelor of Science in Electrical Technology">BSET</option>
-</select>
-
+                id="user-department"
+                value={department}
+                onChange={(e) => setDepartment(e.target.value)}
+                required
+              >
+                <option value="" disabled>Select Department</option>
+                <option value="Bachelor of Science and Information Technology">BSIT</option>
+                <option value="Bachelor of Science in Food Technology">BSFT</option>
+                <option value="Bachelor of Science in Automotive Technology">BSAT</option>
+                <option value="Bachelor of Science in Electrical Technology">BSET</option>
+              </select>
             </div>
             <div className='input-box button'>
               <input type='submit' value='Register Now' />
