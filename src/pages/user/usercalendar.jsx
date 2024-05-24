@@ -60,7 +60,7 @@ const Usercalendar = ({history}) => {
     const formattedDate = `${year}-${month}-${day}`;
   
     try {
-      const response = await fetch('https://collabsia.vercel.app/api/getme', {
+      const response = await fetch('https://collabsiaserver.onrender.com/api/getme', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -70,11 +70,11 @@ const Usercalendar = ({history}) => {
       const myemail = result.user.email;
   
       const [memoResponse, eventResponse] = await Promise.all([
-        axios.post("https://collabsia.vercel.app/api/memo/send-and-recieve", {
+        axios.post("https://collabsiaserver.onrender.com/api/memo/send-and-recieve", {
           date: formattedDate,
           email: myemail,
         }),
-        axios.post("https://collabsia.vercel.app/api/getevent", { useremail: myemail, date: formattedDate }),
+        axios.post("https://collabsiaserver.onrender.com/api/getevent", { useremail: myemail, date: formattedDate }),
       ]);
   
       const memoData = memoResponse.data.memo || [];
@@ -137,7 +137,7 @@ const Usercalendar = ({history}) => {
   useEffect(() => {
     const fetchEventsForCurrentMonth = async () => {
       try {
-        const response = await fetch('https://collabsia.vercel.app/api/getme', {
+        const response = await fetch('https://collabsiaserver.onrender.com/api/getme', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -150,7 +150,7 @@ const Usercalendar = ({history}) => {
         const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
         const endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
 
-        const thisMonthEventResponse = await axios.post("https://collabsia.vercel.app/api/Eventonthismonth", { email: myemail });
+        const thisMonthEventResponse = await axios.post("https://collabsiaserver.onrender.com/api/Eventonthismonth", { email: myemail });
 
         const thisMonthEvents = thisMonthEventResponse.data.events.map((event) => ({
           eventid: event._id,
@@ -221,7 +221,7 @@ const Usercalendar = ({history}) => {
 
       if (response.status === 200 && response.data) {
         const email = response.data.user.email;
-        const read = await axios.post('https://collabsia.vercel.app/api/memo/read', { email, memoId });
+        const read = await axios.post('https://collabsiaserver.onrender.com/api/memo/read', { email, memoId });
         history.push(`/user/memo/${memoId}`);
       }
     } else{
@@ -238,7 +238,7 @@ const Usercalendar = ({history}) => {
 
 
   useEffect(() => {
-    fetch('https://collabsia.vercel.app/api/details', {
+    fetch('https://collabsiaserver.onrender.com/api/details', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -308,7 +308,7 @@ const Usercalendar = ({history}) => {
               'end': { 'dateTime': new Date(endDateTime).toISOString(), 'timeZone': 'Asia/Manila' }
             };
 
-            const res = await fetch('https://collabsia.vercel.app/api/getme', {
+            const res = await fetch('https://collabsiaserver.onrender.com/api/getme', {
               headers: {
                 'Authorization': `Bearer ${token}`,
               },
