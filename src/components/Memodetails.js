@@ -6,7 +6,7 @@ import Footer from '../components/footer';
 import '../App';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import SidebarUser from '../../components/SidebarUser';
 import { pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`;
 
@@ -148,28 +148,7 @@ if (!memoDetails) {
       </div>
 
       <div className="dashboard">
-        <div className="sidebar">
-        <li className={activeMenuItem === 'Dashboard' ? 'active' : ''}>
-            <a onClick={() => handleMenuItemClick('Dashboard')} href="Dashboard">
-              Dashboard
-            </a>
-          </li>
-          <li className={activeMenuItem === 'Memo Manager' ? 'active' : ''}>
-            <a onClick={() => handleMenuItemClick('Memo Manager')} href="memo">
-              Memo Manager
-            </a>
-          </li>
-          <li className={activeMenuItem === 'Calendar' ? 'active' : ''}>
-            <a onClick={() => handleMenuItemClick('Calendar')} href="#">
-              Calendar
-            </a>
-          </li>
-        
-          <li className={activeMenuItem === 'Report List' ? 'active' : ''}>
-            <a onClick={() => handleMenuItemClick('Report List')} href="report_list">
-              Report List
-            </a>
-          </li>
+       <SidebarUser/>
         </div>
 
         <div className='content'>
