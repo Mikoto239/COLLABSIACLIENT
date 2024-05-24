@@ -307,17 +307,6 @@ const Secretaryfacultymanager = () => {
                   </div>
                 </ul>
         
-                {isDeleteConfirmationOpen && (
-        <div className="confirmation-modal">
-          <div className="modal-content">
-            <p>Are you sure you want to delete this user?</p>
-            <div className="button-container">
-            <button onClick={handleConfirmDelete}>Yes</button>
-            <button onClick={handleConfirmationClosedelete}>No</button>
-            </div>
-          </div>
-        </div>
-      )}
               </div>
             ))
           )}
@@ -328,6 +317,19 @@ const Secretaryfacultymanager = () => {
             <div className="button-container">
             <button onClick={handleConfirmSend}>Yes</button>
             <button onClick={handleConfirmationClose}>No</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+            
+                {isDeleteConfirmationOpen && (
+        <div className="confirmation-modal">
+          <div className="modal-content">
+            <p>Are you sure you want to delete this user?</p>
+            <div className="button-container">
+            <button onClick={handleConfirmDelete}>Yes</button>
+            <button onClick={handleConfirmationClosedelete}>No</button>
             </div>
           </div>
         </div>
