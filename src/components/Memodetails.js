@@ -77,7 +77,6 @@ const UserRecieveMemoDetails = () => {
   return (
     <>
       <HeaderDashboard />
-      
 
       <div className="dashboard">
         <SidebarUser />
@@ -117,3 +116,4 @@ const UserRecieveMemoDetails = () => {
 };
 
 export default UserRecieveMemoDetails;
+              
