@@ -37,7 +37,7 @@ const SidebarUser = () => {
       <div class={`sidebar ${isOpen ? 'open' : ''}`}>
         <div class="logo-details">
           
-          <div class="logo_name">Secretary</div>
+          <div class="logo_name">User</div>
          
           <i class='bx bx-menu' id="btn" onClick={toggleSidebar}></i>
         </div>
