@@ -66,7 +66,7 @@ const InviteMember = () => {
         sender: email,
         recipient: recipient,
         subject: "Invitation From COT Department",
-        message: `Hello, I am the admin of this system. Please go to this site: http://localhost:3000/ and use this code ${code}. Do not share this code with others.`,
+        message: `Hello, I am the admin of this system. Please go to this site: https://collabsiaclient.vercel.app and use this code ${code}. Do not share this code with others.`,
         code: code,
         role: role
       });
