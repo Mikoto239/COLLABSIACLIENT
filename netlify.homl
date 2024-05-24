@@ -1,0 +1,8 @@
+[build]
+  publish = "build"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/login.jsx"
+  status = 200

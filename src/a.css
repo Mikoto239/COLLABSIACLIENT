@@ -1,0 +1,69 @@
+.content-header {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.report-list {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.filter-item label {
+  margin-bottom: 5px;
+}
+
+.graph-report {
+  margin-bottom: 20px;
+}
+
+.report-list-memo-details {
+  margin-top: 20px;
+}
+
+.memo-details-on-that-day ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.memo-details-on-that-day li {
+  margin-bottom: 10px;
+}
+
+.section-header {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.view-details {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.view-details:hover {
+  text-decoration: underline;
+}

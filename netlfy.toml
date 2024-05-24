@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/login/*"
+  to = "/src/pages/login.jsx"
+  status = 200

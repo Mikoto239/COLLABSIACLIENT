@@ -1,0 +1,3024 @@
+
+  * {
+    margin: 0;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    
+  }
+  .buksu {
+    color: white;
+  }
+
+ 
+  body {
+    background-color: white;
+  }
+
+ 
+  
+  .profiledetails {
+    color: black;
+  }
+
+  .details-picture{
+    display: 'block';
+    margin: 'auto';
+  }
+
+
+  /* Login header */
+/* Default styles for width >= 600px */
+.head {
+  background: linear-gradient(to right, rgba(81, 2, 2, 0.87), rgba(255, 102, 102, 0.87));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+ 
+}
+
+.header-button {
+  text-align: right;
+}
+
+.nav-link-login,
+.nav-link-signup {
+  text-decoration: none;
+  background-color:  #800000;
+  color: whitesmoke;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 2px solid #720515;
+  margin: 0 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.nav-link-login:hover,
+.nav-link-signup:hover {
+  background-color:#333;
+  border-color: #FF7F7F;
+  color: white;
+}
+
+/* Remove border for the last link */
+.nav-link-signup {
+  border-right: none;
+}
+
+@media (max-width: 599px) {
+  .head {
+    background: linear-gradient(to right, rgba(81, 2, 2, 0.87), rgba(255, 102, 102, 0.87));
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    max-height: 100px;
+    max-width: 100px;
+    margin-right: 10px;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+  }
+  
+  .title {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .header-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .nav-link-login,
+  .nav-link-signup {
+    text-decoration: none;
+    background-color: #ca0c4bc9;
+    color: whitesmoke;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #720515;
+    margin: 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .nav-link-login:hover,
+  .nav-link-signup:hover {
+    background-color: #510202;
+    border-color: #FF7F7F;
+    color: white;
+  }
+  
+  @media (max-width: 600px) {
+    .head {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header-button {
+      width: 80%;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    .nav-link-login,
+    .nav-link-signup {
+      margin: 5px 5px;
+      padding: 8px 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-link-login:hover,
+    .nav-link-signup:hover {
+      background-color: #510202;
+      border-color: #FF7F7F;
+      color: white;
+    }
+  
+    .logo {
+      max-height: 40px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .head {
+      padding: 8px;
+    }
+  
+    .title h5, .title h3 {
+      font-size: 1rem;
+    }
+  
+    .logo {
+      max-height: 30px;
+    }
+  
+    .header-button {
+      padding: 5px;
+    }
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 400px) {
+  .head {
+    padding: 8px;
+  }
+
+  .title h5, .title h3 {
+    font-size: 1rem;
+  }
+
+  .logo {
+    max-height: 30px;
+  }
+
+  .header-button {
+    padding: 5px;
+  }
+}
+
+
+/* Login header */
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    border-right: 1px solid #ccc;
+  }
+  
+
+/* login and sign form */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  background-color: white;
+  min-height: 50vh; /* Set minimum height to 50% of the viewport height */
+  height: auto;
+  flex-grow: 1; /* Allow container to grow to fill available space */
+  padding: 2em; /* Add some padding for spacing */
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 600px) {
+  .container {
+    padding: 1em; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0.5em; /* Further adjust padding for even smaller screens */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register {
+  max-width: 90%; /* Set a maximum width */
+  padding: 3rem; /* Adjust padding using relative units */
+  justify-content: center;
+  align-items: center; 
+  height: auto; /* Set height to auto for flexibility */
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem; /* Adjust border radius using relative units */
+  background: linear-gradient(to right, rgba(81, 2, 2, 0.87), rgba(255, 102, 102, 0.87));
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Adjust shadow using relative units */
+  box-sizing: border-box; /* Ensure padding and border are included in the width/height */
+  animation: fadeIn 0.5s ease-out; /* Apply the fadeIn animation */
+}
+
+
+
+  
+  #signUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #signIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adjust as needed based on your layout */
+  }
+
+  .recaptcha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  @media (max-width: 600px) {
+    .register {
+      padding: 20px; /* Reduce padding on smaller screens */
+      min-width: 280px; /* Adjust min-width for smaller screens */
+    }
+  }
+  
+  /* Media query for very small screens */
+  @media (max-width: 400px) {
+    .register {
+      padding: 15px; /* Further reduce padding */
+      min-width: 250px; /* Further adjust min-width */
+    }
+  }
+
+  .register h2 {             /*title*/
+    color: #fff;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+/* login and sign form */
+
+
+
+
+/* footer */
+.footer {
+
+  padding: 10px 0;
+  text-align: center;
+
+  bottom: 0;
+  left: 0; /* Align to the left edge of the viewport */
+  width: 100%;
+}
+/* footer */
+
+
+/* headerdashboard */
+.nav-item-headerdashboard {
+  display: flex;
+  align-items: center;
+  text-align: right;
+  margin-left: auto; 
+}
+
+.button-logout {
+  text-decoration: none;
+  background-color: #333;
+  color: whitesmoke;
+  padding: 0.5em 1em; /* Adjust padding using em */
+  border-radius: 1em; /* Adjust border radius using em */
+  border: 2px solid #720515;
+  margin: 0 1em; /* Adjust margin using em */
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); /* Adjust box shadow using em */
+  transition: background-color 0.3s, border-color 0.3s;
+  display: flex;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.button-logout:hover {
+  background-color: #333;
+  border-color: #510202;
+  color: white;
+}
+
+.account-container,
+.notification-container {
+  margin-right: 2%; /* Use percentage for flexibility */
+}
+
+.account-button,
+.notification-button {
+  text-decoration: none;
+  background-color:  #800000;
+  color: whitesmoke;
+  padding: 0.5em 1em; /* Adjust padding using em */
+  border-radius: 1em; /* Adjust border radius using em */
+  border: 2px solid #720515;
+  margin: 0 1em; /* Adjust margin using em */
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); /* Adjust box shadow using em */
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.account-button:hover,
+.notification-button:hover {
+  background-color: #333;
+  border-color: #FF7F7F;
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1.25em; /* Adjust padding using em */
+  border-radius: 0.625em; /* Adjust border radius using em */
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); /* Adjust box shadow using em */
+  z-index: 999;
+}
+
+.modal h2 {
+  margin-bottom: 0.625em; /* Adjust margin using em */
+}
+
+.clickable-notification {
+  cursor: pointer;
+  margin-bottom: 0.3125em; /* Adjust margin using em */
+}
+
+.notifications-scroll-container {
+  max-height: 12.5em; /* Adjust max-height using em */
+  overflow-y: auto;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 599px) {
+  .logo {
+    max-height: 6.25em; /* Adjust max-height using em */
+    max-width: 6.25em; /* Adjust max-width using em */
+  }
+  
+  .button-logout {
+    margin-top: 1em; /* Adjust margin-top using em */
+  }
+  
+  .title {
+    margin-right: 0;
+    text-align: center;
+  }
+  
+  .nav-item-headerdashboard {
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    margin: 0; /* Reset margin */
+  }
+  
+  .account-container,
+  .notification-container {
+    margin-right: 0;
+    margin-top: 1em; /* Adjust margin-top using em */
+  }
+}
+
+@media (max-width: 400px) {
+  .head {
+    padding: 0.5em; /* Adjust padding using em */
+  }
+  
+  .logo {
+    max-height: 1.875em; /* Adjust max-height using em */
+  }
+}
+
+
+
+/* headerdashboard */
+
+
+
+/* Sidebar */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.sidebar {
+  left: 0;
+  top: 0;
+  height: 100%;
+  max-height: 100vh; /* Set maximum height to viewport height */
+  width: 78px;
+  background: #11101D;
+  padding: 6px 14px;
+  overflow-y: auto; /* Add vertical scroll if content overflows */
+  transition: all 0.5s ease;
+
+  margin-right: 10px;
+}
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details .logo_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+
+
+.sidebar input{
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #1d1b31;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar.open .bx-search:hover{
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar .bx-search:hover{
+  background: #FFF;
+  color: #11101d;
+}
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #11101D;
+}
+.sidebar li a:hover{
+  background: #FFF;
+}
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #11101D;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #1d1b31;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+.home-section{
+  position: relative;
+  background: #E4E9F7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+
+
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex: 1;
+  padding: 20px;
+  margin-right: 20px;
+  background-color: rgb(113, 111, 111);
+  border-radius: 25px;
+  height: auto;
+  width: auto;
+  overflow-y: auto;
+}
+.Graph-dashboard {
+  flex: 1 1 65%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 25px 25px 25px 25px; /* Border radius for top-left, top-right, bottom-right, bottom-left corners */
+}
+
+
+
+
+.calendar-dashboard {
+  display: flex;
+  justify-content: center;
+  flex: 1; /* Allow the calendar to take up remaining space */
+  width: 100%; /* Set width to 100% */
+}
+
+.memolatest,
+.calendar-dashboard {
+  flex: 1 1 35%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+}
+
+.memolatest {
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.eventdate {
+  overflow-y: auto;
+  background-color: rgb(208, 183, 183);
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  order: 1;
+}
+
+
+
+
+
+
+
+
+.msb {
+  width: 200px;
+  background-color: #0e86ff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: auto;
+  min-height: 100%;
+  overflow-y: auto;
+  white-space: nowrap;
+  height: 100%;
+  z-index: 1;
+  border-right: 1px solid #ddd;
+}
+
+.cv {
+  width: 100%;
+}
+
+.content-memo-manager {
+  margin-bottom: 20px;
+}
+
+.memo-list-header,
+.receive-memo-header {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
+.link-to-send {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.link-to-send:hover {
+  background-color: #45a049;
+}
+
+.search-left,
+.search-right {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
+  transition: all 0.3s ease;
+}
+
+.memo-list-container,
+.receive-memo-list {
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  max-height: calc(3 * 100px + 38px); /* Height for 3 memo-details plus padding */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #fff;
+  font-family:  Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #39464e;
+}
+
+.memo-details-sent,
+.memo-details-received {
+  background-color: #ffffff;
+  color: black;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px; /* Fixed height for each memo-details element */
+}
+
+.memo-details-sent:hover,
+.memo-details-received:hover {
+  transform: scale(1.01); /* Slightly increase size */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add shadow for 3D effect */
+  z-index: 10; /* Ensure it stays above other elements */
+  text-decoration: none;
+}
+
+
+/* Optional: Adjust for smaller screens */
+@media (max-width: 768px) {
+  .memo-list-container,
+  .receive-memo-list {
+    max-height: calc(3 * 80px + 40px); /* Adjust height for smaller screens */
+  }
+
+  .memo-details-sent,
+  .memo-details-received {
+    height: 80px; /* Adjust height for smaller screens */
+  }
+}
+
+
+.memo-details-sent .memo-title,
+.memo-details-received .memo-title {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; 
+  text-align: left; 
+  overflow-wrap: break-word;
+}
+
+.memo-details-sent .memo-sender,
+.memo-details-received .memo-sender {
+  margin-top: 18px;
+  flex: 2;
+  text-align: left; 
+}
+
+.memo-details-sent .memo-date-sent,
+.memo-details-received .memo-date,
+.memo-details-sent .memo-content-details,
+.memo-details-received .memo-content-details {
+  flex: 2;
+  text-align: left; 
+  overflow-wrap: break-word; /* Ensure long words wrap within the container */
+}
+
+.memo-details-sent .memo-content-details,
+.memo-details-received .memo-content-details {
+  margin-top: 18px;
+  gap: 10px;
+}
+
+
+
+
+.memo-title {
+  flex: 1;
+
+}
+
+.memo-sender {
+  flex: 2;
+  text-align: left;
+}
+
+.memo-date {
+  flex: 1;
+  text-align: left;
+}
+
+.memo-content-details {
+  flex: 1;
+  text-align: left;
+  margin-top: 10px; /* Adjust margin */
+}
+.memo-details-sent .memo-date-sent {
+  margin-left: auto; /* Pushes this element to the right */
+  text-align: right; /* Ensures text is aligned to the right */
+}
+
+
+.create-memo {
+  text-decoration: none;
+  display: flex;
+  padding: 10px 20px;
+  background-color: #800000;
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.received-memo {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.received-memo::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-size: 12px;
+}
+
+.received-memo:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.create-memo .arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.create-memo:hover .arrow {
+  transform: translateX(5px); /* Move arrow to the right on hover */
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+/* memo manager */
+
+
+
+
+.h1{
+  text-align: center;
+
+}
+
+  form {
+    text-align: center;
+  }
+
+  input {
+    border-radius: 10px;
+    padding: 5px;
+    width: 85%;
+    height: 30px;
+    margin: 15px;
+
+  }
+  
+  .profiledetials{
+    min-width: 350px;
+    padding: 30px;
+    height: max-content;
+    flex-direction: column;
+    border-radius: 20px;
+    background: #1635d1;
+  }
+
+
+  /* Add your existing CSS styles here */
+
+  /* Style the clicked menu item with a red background and fading effect */
+ 
+
+
+  /* Reset some default styles for the body and ul */
+  body, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Define styles for the dashboard container */
+  .dashboard {
+    display: flex; /* Use flexbox for layout */
+    
+  }
+
+  
+ 
+
+  /* Style the main content area (adjust width and margin as needed) */
+ 
+  /* Style the search bar */
+  
+
+  .content-header{
+    display: flex;
+    justify-Content: space-between;
+    align-Items: center;
+  }
+
+
+  .selectrole {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .selectrole label {
+    margin-right: 10px; /* Optional: Add some spacing between the label and the radio button */
+  }
+
+  .selectrole input[type="radio"] {
+    transform: scale(0.5); /* Adjust the scale factor as needed */
+    margin-right: 5px; /* Optional: Add some spacing between the label and the radio button */
+  }
+
+  .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+  }
+ 
+
+/* Style for the dropdown button */
+.dropbtnfaculty {
+  background-color: #800000;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style for the dropdown container */
+
+
+/* Style for the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 110%;
+  z-index: 1;
+}
+
+/* Style for dropdown options */
+.dropdown-content div {
+  padding: 12px 16px;
+  display: block;
+}
+
+
+
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+     background-color: green;
+    display: block;
+      margin-left: 100%;
+    float: right;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    float: left;
+    
+  }
+
+
+
+
+  .editbutton {
+    background-color: #510202df;
+    color: white;
+    width: 20%;
+    border-radius: 15px;
+    height: 40px;
+    padding: 5px;
+    margin: 15px;
+
+  }
+
+
+  #createMemoback{
+   margin-bottom: 50px;
+  }
+
+
+  
+  .details-list:first-child {
+    flex: 2;
+  }
+  
+  /* Styles for the checkbox */
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Styles for the role */
+  .details-list:nth-child(2) {
+    color: #333;
+    font-weight: bold;
+  }
+  
+ 
+  /* Different colors based on the role */
+  .details-list:nth-child(2).admin {
+    color: #e74c3c; /* Red for Admin */
+  }
+  
+  .details-list:nth-child(2).secretary {
+    color: white; /* Blue for Secretary */
+  }
+  
+  .details-list:nth-child(2).instructor {
+    color: #2ecc71; /* Green for Instructor */
+  }
+  
+  .details-list:nth-child(2).unregistered {
+    color: #404949; /* Gray for Unregistered User */
+  }
+
+  .title{
+    width: 50%;
+  }
+
+  .memoMessage {
+    width: 42%;
+    height: 30vh;
+    
+
+  }
+  .memoFile{
+    width: 42%;
+    display: flex;
+    margin: 0 2.5rem;
+  }
+
+  
+
+  .file-upload{
+    text-align: center;
+  }
+
+  .listoffaculty {
+   float: right;
+   background-color: white;
+   overflow-y: auto;
+   width: 40%;
+   margin-top: -170px;
+   height: 430px;
+  }
+  
+
+
+  .user-picture {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    border-radius: 50%; /* Apply a circular border to the image */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the image */
+  }
+
+
+  .clearButton {
+    background-color: #330eee; /* Customize the background color */
+    color: #fff; /* Customize the text color */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+
+
+  .memo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .memo-details {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+  }
+
+ 
+  
+
+  .memo-date {
+    font-size: 12px;
+    color: #999;
+  }
+
+
+  .memo-details-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+
+  .memo-title-details {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .memo-sender-details,
+  .memo-timestamp-details,
+  .memo-content-details {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+
+
+
+  
+  .react-calendar {
+    color: black;
+  }
+
+  /* If necessary, adjust other styles to suit your design */
+  .react-calendar__tile {
+    color: black;
+    background-color: white;
+    border: 1px solid #ddd;
+  }
+
+  /* Optionally, style other parts of the calendar as needed */
+  .react-calendar__navigation {
+    background-color: #510202df;
+    color: white;
+  }
+
+  /* Add this CSS for the modal */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 101; /* Higher than the overlay */
+  }
+
+  .modal h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .modal p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .modal button {
+    background-color: #510202df;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .modal button:hover {
+    background-color: #510202;
+  }
+
+
+  .notification-label.hovered {
+    background-color: gray;
+  }
+
+  .notifications-scroll-container {
+    max-height: 250px; /* Set a maximum height for the scrollable container */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds the container height */
+    color: black; /* Set the text color to black */
+  }
+  .modalnotification {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 101; /* Higher than the overlay */
+  }
+
+  .modal p {
+    color: black; /* Set the text color to black */
+    
+  }
+  h2{
+    color: black; /* Set the text color to black */
+  }
+
+
+
+  /*Headerdashboard*/
+  .head {
+    background-color: #510202df;
+    color: white;
+    font-size: 7;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    padding: 0 20px;
+  }
+
+  .logo {
+    height: 50px;
+    width: 50px;
+    margin-right: 1px; /* Adjust the margin between the logo and text as needed */
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item {
+    display: flex;
+    justify-content: right;
+  }
+
+  .account-container,
+  .notification-container {
+    margin-right: 10px;
+  }
+
+ 
+
+  
+
+  
+  .dashboard {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Add this line to space the items */
+  }
+
+  /* Style the main content area (adjust width and margin as needed) */
+ 
+
+
+ 
+  .events-list {
+    max-height: 300px; /* Set the maximum height based on your design */
+    overflow-y: auto; /* Add a vertical scrollbar if needed */
+    background-color: #f4f4f4; /* Optional: Add a background color */
+    padding: 10px; /* Optional: Add padding for better aesthetics */
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for a subtle effect */
+    font-family: 'Arial', sans-serif; /* Optional: Set the font family */
+  } 
+  .Event-Calendar {
+    
+    background-color: #330eee;
+    position: fixed;
+  }
+
+  .calendar-and-events {
+    display: flex;
+  }
+
+
+
+
+ 
+
+
+
+
+  .dropdown{
+    float: right;
+  }
+
+
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+  @import "../node_modules/@syncfusion/ej2-react-documenteditor/styles/material.css";
+
+  .editor-container {
+    width: 70%; /* Adjust the width based on your design */
+  }
+
+
+  .pdf-div{
+    color: black;
+  }
+
+
+
+  /* memo manager */  
+
+  .search-bar-left {
+    float: left;
+    background-color:white;
+    width: 99%;
+    height: 215px; /* Take half of the container height */
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  
+  .search-bar-right {
+    float: left;
+    background-color: white;
+    width: 99%;
+    height: 215px; 
+    overflow-y: auto ;
+   
+  }
+  
+ 
+ .search-right-receive{
+  width: 15%;
+  height: 10%;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #800000; /* Change the background color */
+  color: white; /* Change the text color */
+  border-radius: 10px;
+
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+
+  /* Additional styles for better appearance */
+  cursor: pointer;
+ }
+
+ .search-bar-right:hover {
+  background-color: rgb(32, 37, 39); /* Change the background color on hover if desired */
+}
+
+ 
+
+  
+
+   .memo-details{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-family: Arial;
+    border-color: black;
+    border-width: 80%;
+     border: 2px solid black;
+    size: 10px;
+   }
+
+   
+  .receivedMemoList{
+    overflow-y: auto;
+    background-color: white;
+  
+  }
+  .sendMemoList{
+    background-color: rgb(255, 254, 254);
+    border-radius: 10px;
+  }
+  
+  .top-receive{
+    text-shadow:black ;
+    background-color: #1635d1;
+
+  }
+
+ 
+ 
+  .memo-details{
+    background-color: white;
+    padding: 20px;
+  }
+
+  .memo-content-details{
+    font-weight: bold;
+    color: black;
+  }
+
+ 
+  .memo-date{
+    font-weight: bold;
+    color: black;
+  }
+
+  .Graph-report{
+   border: 2px inset black;
+  }
+
+
+  .memo-details-on-that-day{
+    overflow: auto;
+    background-color: white;
+    margin-bottom: 5px;
+    justify-content: space-between;
+  }
+
+ 
+
+  .view-details{
+    text-decoration: none;
+    display: inline-block;
+    background-color: green; /* Change the background color */
+    color: white; /* Change the text color */
+    border-radius: 7px;
+    padding-bottom: 5px;
+    padding: 5px;
+   
+  }
+
+  .memo-details-on-that-day {
+    /* Add margin to the entire container */
+    margin-bottom: 20px;
+  }
+  
+  .memo-details-on-that-day p {
+    /* Add margin to each paragraph */
+    margin-bottom: 10px;
+  }
+  
+  .memo-details-on-that-day ul {
+    /* Add padding to the unordered list */
+    padding-left: 30px;
+  }
+  
+  .memo-details-on-that-day li {
+    /* Add margin to each list item */
+    margin-bottom: 5px;
+  }
+  
+  .memo-details-on-that-day a.view-details {
+    /* Add margin to the "View Details" link */
+    margin-left: 10px;
+  }
+  
+
+  .received-memo-section{
+    margin-bottom: 5px;
+    margin-bottom: 20px;
+  }
+  .section-header {
+    margin-bottom: 100px; /* Adjust the margin value according to your preference */
+  }
+  
+  .search-bar-right-user{
+    float: left;
+    background-color: white;
+    width: 99%;
+    height: 100%; 
+    overflow-y: auto ;
+  }
+
+  .createEvent {
+    float: left;
+    clear: left; /* Clear the float to ensure it stays below the Events Container */
+    width: 100%; /* Occupy the entire width */
+    margin-top: 20px; /* Add margin-top to provide spacing */
+  }
+
+
+
+.event-item {
+  background-color: skyblue;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 5px;
+  cursor: pointer;
+  overflow: auto;
+  list-style-type: none; /* Remove bullets */
+}
+
+
+
+.createEvent {
+  float: left;
+  clear: left; /* Clear the float to ensure it stays below the Events Container */
+  width: 99%; /* Occupy the entire width */
+  margin-top: 20px; /* Add margin-top to provide spacing */
+}
+
+.createEvent {
+  float: left;
+  clear: left;
+ 
+  margin-top: 20px;
+
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.createEvent label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.createEvent input,
+.createEvent textarea {
+  width: 75%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.createEvent input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.createEvent input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+
+.showmemo{
+  width: 50%;
+}
+
+.profiledetails{
+  text-align:center;
+  background-color: #800000;
+  font-size: medium;
+  color: white;
+  width: 40%;
+  margin-left: 29%;
+  border: 7px solid black;
+}
+
+.details-list-profile{
+ font-size: large;
+}
+
+.selectdepartment {
+
+  align-items: center;
+  background-color:  #800000;
+  color: white;
+  width: 50%;
+  margin-left: 25%;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-around; /* Adjust the spacing between radio buttons */
+  margin-bottom: 20px;
+  border: 5px solid black;
+}
+
+/* Optional: Add some spacing between the labels and radio buttons */
+
+
+
+.verification-section {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Add some margin above the verification section */
+  background-color: #800000;
+  color: white;
+  width: 50%;
+  margin-left: 25%;
+  font-weight: 400;
+  border: 5px solid black;
+}
+.verification-section button:hover {
+  background-color: #0056b3;
+}
+
+.verification-section button{
+  background-color: white;
+  color: black;
+  font-weight: 400;
+}
+
+
+.googlesign{
+  align-items: center;
+  margin-left: 70px;
+}
+
+
+.nav-item-header{
+  display: flex;
+  font-size: large;
+  margin-left: 60%;
+   justify-content: space-around;
+  
+}
+
+
+
+
+
+
+
+
+
+.Creatememo {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Adjusted width */
+  position: relative;
+  z-index: 1; /* Ensure it appears above other elements */
+  text-align: left;
+  justify-content: start;
+  
+}
+
+
+
+.title-memo {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.title-memo input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.listoffaculty {
+  text-align: left;
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds the height */
+  background-color: rgb(147, 33, 33);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-content: start;
+}
+
+
+.fileinput-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* Align items vertically */
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.fileinput {
+  margin-bottom: 10px;
+
+}
+
+
+
+.fileinput-container input {
+  width: 30%; /* Remove width to allow flexbox to control its size */
+  padding: 10px;
+}
+
+.memoSend {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.memoSend:hover {
+  background-color: #45a049;
+}
+
+
+.listoffaculty-create {
+  margin-top: 20px;
+  text-align: left;
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds the height */
+  background-color: rgb(147, 33, 33);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-content: start;
+  width: 100%; /* Set width to 100% */
+  max-width: 100%; /* Ensure it doesn't exceed the parent container's width */
+  max-height: 300px; /* Set a maximum height */
+}
+
+.listoffaculty-create {
+  margin-top: 20px;
+  background-color: rgb(147, 33, 33);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 300px;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange children vertically */
+}
+
+.dropdown {
+  display: flex; /* Use flexbox */
+  align-items:flex-start; /* Align items vertically */
+  margin-bottom: 10px;
+}
+
+.dropbtw {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.selectAllButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;  
+  width: 45%;
+  margin-top: -55px;
+  margin-bottom: 10px;
+}
+
+
+
+
+.details-list {
+  margin-right: 10px;
+  gap: 90%;
+}
+
+.dropdown-content-faculty{
+  text-align: end;
+}
+
+
+.listoffaculty-create {
+  margin-top: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 400px;
+
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange children vertically */
+}
+
+.dropdown {
+  display: flex; /* Use flexbox */
+  align-items: flex-start; /* Align items vertically */
+  margin-bottom: 10px;
+}
+
+  .dropbtw {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: auto; /* Push the dropdown to the left */
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    float:left;
+    margin-right: 65%;
+    width: 10%;
+  }
+.selectAllButton {
+  background-color: #989292;
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto; /* Push the Select All button to the right */
+}
+  
+.dropbtw {
+  background-color: #867d7d;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content-faculty {
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  text-align: center;
+}
+
+.dropdown-content-faculty {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-content-faculty div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-faculty div:hover {
+  background-color: #f1f1f1;
+}
+
+
+.confirmation-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  z-index: 101; /* Higher than the overlay */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Space between the buttons */
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:last-child {
+  background-color: #800000;
+}
+
+.modal-content button:hover {
+  background-color: #45a049;
+}
+
+.modal-content button:last-child:hover {
+  background-color: #8b0000;
+}
+
+.user-details-send{
+  background-color: #ffffff;
+  color: black;
+  font-weight: 800;
+}
+
+.user-details-send {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* Bottom shadow */
+  border-bottom: 1px solid black;
+  padding-bottom: 5px; /* Optional: to add space between content and bottom border */
+}
+
+ /* memo receive */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex: 1;
+  padding: 20px;
+  margin-right: 20px;
+  background-color: rgb(113, 111, 111);
+  border-radius: 25px;
+  height: auto;
+  width: auto;
+  overflow-y: auto;
+}
+
+
+.memo-details-body {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  width: 100%; /* Set the width to 100% */
+  max-width: 100%; /* Ensure it doesn't exceed the parent container's width */
+}
+
+.link-to-memo-manager{
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.memo-title-sent {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+
+}
+
+.memo-timestamp-sent
+{
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.memo-recipients-details {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+
+}
+
+/* Heading for the recipients section */
+.memo-recipients-details h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* List styling */
+.memo-recipients-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual recipient container */
+
+
+/* Last recipient doesn't need a border-bottom */
+.recipient:last-child {
+  border-bottom: none;
+}
+
+/* Paragraph styling for recipient details */
+.recipient p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Strong text styling */
+.recipient p strong {
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .memo-recipients-details {
+    padding: 15px;
+  }
+
+  .memo-recipients-details h2 {
+    font-size: 22px;
+  }
+
+  .recipient p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .memo-recipients-details {
+    padding: 10px;
+  }
+
+  .memo-recipients-details h2 {
+    font-size: 20px;
+  }
+
+  .recipient p {
+    font-size: 12px;
+  }
+}
+
+
+/* Container for the label and button */
+.acknowledge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Styling for the label */
+.acknowledge-label {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Styling for the button */
+.acknowledge-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.acknowledge-button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .acknowledge-container {
+    padding: 15px;
+  }
+
+  .acknowledge-label {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .acknowledge-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .acknowledge-container {
+    padding: 10px;
+  }
+
+  .acknowledge-label {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .acknowledge-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.wrapper {
+  max-width: 430px;
+  width: 100%;
+  margin: 50px auto; /* Center the form vertically and horizontally */
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.wrapper h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 50px;
+  background: #4070f4;
+}
+
+.wrapper form {
+  margin-top: 20px;
+}
+
+.wrapper form .input-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust margin-bottom as needed */
+}
+
+.wrapper form .input-box label {
+  /* Adjust label width as needed */
+  margin-right: 0; /* Remove margin-right to eliminate gap between label and input */
+  display: block;
+  font-size: 16px;
+  color: #555;
+  text-align: left; /* Align label text to the left */
+}
+
+.wrapper form .input-box input,
+.wrapper form .input-box select {
+  flex: 1;
+  height: 40px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.wrapper form .input-box input:focus,
+.wrapper form .input-box select:focus {
+  border-color: #4070f4;
+}
+
+.wrapper form .input-box.button input {
+  height: 40px;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4070f4;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wrapper form .input-box.button input:hover {
+  background-color: #0e4bf1;
+}
+
+.wrapper form .text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.wrapper form .text h3 {
+  color: #333;
+  font-size: 14px;
+}
+
+.wrapper form .text h3 a {
+  color: #4070f4;
+  text-decoration: none;
+}
+
+.wrapper form .text h3 a:hover {
+  text-decoration: underline;
+}
+
+
+.send-invitation {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 800px; /* Set a max-width for better appearance on large screens */
+  margin: 0 auto; /* Center the container */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.send-invite-button {
+  background-color: #000000;
+  color: white;
+  transition: background-color 0.3s;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.send-invite-button:hover {
+  background-color: #888888;
+}
+
+.recipient {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.roleselect {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  gap: 10px;
+  flex-wrap: wrap; /* Ensure the content wraps within the container */
+}
+
+.roleselect label {
+  margin-right: 10px;
+  font-size: 16px;
+  flex-shrink: 0; /* Prevent label from shrinking */
+}
+
+.roleselect select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.gmailrecipient {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  flex-wrap: nowrap; /* Keep label and input on the same line */
+}
+
+.gmailrecipient label {
+  margin-right: 10px;
+  font-size: 16px;
+  flex-shrink: 0; /* Prevent label from shrinking */
+  width: auto; /* Auto width for label */
+}
+
+.gmailrecipient input {
+  width: calc(100% - 100px); /* Adjust width to leave space for label */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+@media (max-width: 500px) {
+  .roleselect, .gmailrecipient {
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin: 0%;
+    width: 100%;
+  }
+
+  .gmailrecipient label, .gmailrecipient input {
+    width: 100%; /* Make both label and input full width on small screens */
+  }
+
+  .gmailrecipient input {
+    margin-bottom: 10px; /* Adjust margin for better spacing */
+  }
+}
+
+
+
+
+ /* report-list */
+.report-list {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 10px; /* Example padding */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.Graph-report-list {
+  border: 2px solid black;
+  box-sizing: border-box; /* Ensure border is included in element's total width and height */
+  width: calc(100% - 20px); /* Subtract padding of parent (2 * 10px) */
+}
+
+.report-list-memo-details{
+  text-decoration: none;
+  display: inline-block;
+  background-color: #989898; /* Change the background color */
+  color: rgb(0, 0, 0); /* Change the text color */
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 100%;
+  font-size:larger;
+ 
+}
+
+.memo-details-report{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+}
+
+
+.link-to-report-list{
+  padding: 10px 20px;
+
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  background-color: #000000;
+}
+
+
+.report-graph{
+  margin-top: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.chart-container {
+  flex: 1 1 45%; /* Allow flex item to grow and shrink, with a base size of 45% */
+  min-width: 300px; /* Ensure a minimum width */
+  max-width: 100%; /* Prevent exceeding the parent's width */
+  box-sizing: border-box; /* Include padding and border in element's total width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9; /* Add background color for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+
+
+.dropdownfaculty:hover .dropdown-content {
+  display: block;
+
+}
+.dropdownfaculty {
+  position: relative;
+  display: inline-block;
+  float: right; /* Align to the right side */
+  background-color: #000000;
+  width: 10%;
+} 
+
+
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex: 1;
+  padding: 20px;
+  margin-right: 20px;
+  background-color: rgb(113, 111, 111);
+  border-radius: 25px;
+  height: auto;
+  width: auto;
+  overflow-y: auto;
+}
+
+.faculty-content{
+  background-color: white;
+  width: 100% ;
+}
+
+.details-lists{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white ;
+  list-style-type: none;
+}
+
+
+
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: #fff;
+}
+
+
+
+.dashboard {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Faculty content styling */
+.faculty-content {
+  background-color: white ;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Dropdown styling */
+.dropdownfaculty {
+  position: relative;
+  display: inline-block;
+
+}
+
+.dropbtnfaculty {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdownfaculty:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-content div:hover {
+  background-color: #f1f1f1;
+}
+
+/* User card styling */
+.user-card {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.details-item {
+  margin-bottom: 10px;
+}
+
+.details-item img {
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+.editbutton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editbutton:hover {
+  background-color: #45a049;
+}
+
+/* Confirmation modal styling */
+
+
+
+
+.search {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  
+    width: 100%;
+    height: 20px ;
+    display: flex;
+
+}
+
+
+
+.dropbtnfacultymanager {
+  background-color: gray;
+  color:black;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.User-content {
+  background-color:gray;
+  padding: 10px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.User-content:hover {
+  transform: scale(1.05);
+  background-color:#312222; /* Darker shade of blue for hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.details-list-update {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdownfacultymanager{
+  background-color: #ffffff;
+}
+
+
+.dropdownfacultymana {
+  position: relative;
+}
+
+.dropdownfacultymana .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdownfacultymana:hover .dropdown-content {
+  display: block;
+}
+
+.updated-role-text {
+  position: absolute;
+  top: -30px; /* Adjust this value as needed */
+  left: 0;
+}
+
+
+
+.editdelete{
+  background-color: #000000;
+  padding: 10px;
+
+}
+
+.editbuttondelete {
+  background-color: #e13c22;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.editbuttondelete:hover {
+  background-color: #45a049;
+}
+
+
+
+
+
+
+
+/* Calendar content container */
+.calendar-content {
+  display: flex; /* Use Flexbox for flexible layout */
+  width: 100%; /* Full width */
+}
+
+/* Calendar sidebar taking 30% of the width */
+.calendar-sidebar-calendar {
+  flex: 0 0 30%; /* Flex-grow set to 0, flex-shrink set to 0, and width set to 30% */
+  background-color: #ffffff;
+  padding: 20px;
+  margin-right: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Events container taking 70% of the width */
+.events-container {
+  flex: 1; /* Flex-grow set to 1 to occupy remaining space */
+  background-color: white;
+  padding: 25px;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Event item styling */
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.event-item:hover {
+  background-color: #e9e9e9;
+}
+
+/* Event details */
+.event-item strong {
+  color: #555;
+}
+
+.event-item span {
+  color: #777;
+}
+
+/* Events heading */
+.events-container h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #4CAF50;
+}
+
+/* No events message */
+.events-container p {
+  color: #999;
+}
+
+/* Scrollbar styling */
+.events-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.events-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.events-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.events-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #45a049;
+}
+
+/* Create event form styling */
+.createEvent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.createEvent form {
+  display: flex;
+  flex-direction: column;
+}
+
+.createEvent label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.createEvent input[type="text"],
+.createEvent textarea,
+.createEvent input[type="datetime-local"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.createEvent input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+.createevent{
+  margin: 0 auto;
+}
+
+.createEvent input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1219px) {
+  .calendar-content {
+    flex-direction: column; /* Stack calendar and events vertically on smaller screens */
+  }
+  
+  .calendar-sidebar-calendar {
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+  }
+}
